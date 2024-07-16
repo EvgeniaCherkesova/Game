@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <div class="gameContainer" id="gameContainer">
+    <div id="hp-bar">
+      <div id="hp-fill"></div>
+      <div id="hp-text"></div>           
+    </div>
+    <div id="boss-hp">
+      <div id="boss-hp-fill"></div>      
+    </div>
+    <div class="option">
+      <img src="assets/images/buttons/run.png">
+      <div class="shift" id="shiftCD"></div>
+    </div>
+    <canvas class="gameCanvas" id="gameCanvas"></canvas>    
+    <div class = "timer" id = "timer"></div>
+   </div>
+  <div class = "startScreen" id="startScreen">  
+    <div class="container"> 
+      <button class ="play" id="playButton">Играть</button>
+      <button class="play" id="chooseLvl">Уровни</button>
+      <button class="play" id="controlsBtn" >Управление</button>
+    </div> 
+    <div class="levels" id="levels">
+      <button class="level" id="lvl1"></button>
+      <button class="level" id="lvl2"></button>
+      <button class="level" id="lvl3"></button>
+    </div>
+    <div class="controls" id="controls">
+      <p class="control_key"><img class="key" src="assets/images/buttons/A.png">    - движение влево</p>
+      <p class="control_key"><img class="key" src="assets/images/buttons/D.png"> - движение вправо</p>
+      <p class="control_key"><img class="key" src="assets/images/buttons/Spase.png"> - прыжок</p>
+      <p class="control_key"><img class="key" src="assets/images/buttons/F.png"> - атака</p>
+      <p class="control_key"><img class="key" src="assets/images/buttons/LeftShift.png"> - рывок</p>
+      <p class="control_key"><img class="key" src="assets/images/buttons/esc.png"> - пауза</p>
+    </div>
+  </div>
+
+  <div class="deathScreen" id="deathScreen">Вы проиграли!      
+    <button class="btn" id="restartButton">Перезапустить</button>
+    <button class="btn" id="mainMenuButton">Главное меню</button>
+  </div>
+  <div class="deathScreen" id="finalWin">Вы прошли игру!      
+    <button class="btn" id="restart2Button">Перезапустить</button>
+    <button class="btn" id="mainMenu2Button">Главное меню</button>
+  </div>
+  <div class="deathScreen" id="paused">Пауза      
+    <button class="btn" id="restart3Button">Перезапустить</button>
+    <button class="btn" id="mainMenu3Button">Главное меню</button>
+  </div>
+  <div class="winScreen" id="winScreen"> Уровень пройден! 
+    <button class="btn" id="continueButton">Продолжить</button>   
+    <button class="btn" id="restart1Button">Перезапустить</button>
+    <button class="btn" id="mainMenu1Button">Главное меню</button>
+  </div>
+  <script src="main.js"></script>
+  <script src="JS/hero.js"></script>
+  <script src="JS/menu.js"></script>
+  <script src="JS/platform.js"></script> 
+  <script src="JS/collision.js"></script>
+  <script src="JS/finishZone.js"></script>
+  <script src="JS/decoration.js"></script>
+  <script src="JS/background.js"></script>
+  <script src="JS/gameRenderer.js"></script>  
+  <script src="JS/enemy.js"></script>
+  <script src="JS/chest.js"></script>  
+  <script src="Levels/levels.js"></script>
+</body>
+</html>

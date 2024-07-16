@@ -1,0 +1,288 @@
+body{
+    overflow: hidden;
+    background-image: url('assets/images/buttons/image 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+  #hp-fill {
+    width: 0; /* Начальная ширина полоски */
+    height: 20px;
+    background-color: red; /* Цвет полоски */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  #hp-text {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+  }
+
+
+.startScreen{
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: 65%;
+    margin-top: 7%;
+}
+
+.play{
+    text-decoration: none;
+    color: black;
+    background-color: #FAF1E3;
+    border: 5px solid #58381A;
+    border-radius: 3vh;
+    padding: 3vh 2vh;
+    width: 390px;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+    font-family: "Press Start 2P", sans-serif;
+ }
+  /* //////// */
+.play:hover{
+    background-color:#9c9892 ;
+    width: 410px;
+}
+  #hp-bar { /* добавлен z-index*/
+    width: 220px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: #ccc; /* Серый фон для рамки */
+    position: relative;
+    z-index: 3;
+    overflow: hidden; /* Скрываем полоску за пределами рамки */
+  }
+
+  #boss-hp {
+    width: 220px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: #ccc; /* Серый фон для рамки */
+    position: relative;
+    z-index: 4;
+    overflow: hidden; /* Скрываем полоску за пределами рамки */
+  }
+  
+  #boss-hp-fill {
+    height: 100%;
+    background-color: green;
+    border-radius: 5px 0 0 5px; /* Закругление левой стороны */
+  }
+#chooseLvl{
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 45px;
+    
+}
+#controlsBtn{
+    border-radius: 3vh;
+    padding: 3vh 2vh;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 40px;
+    font-family: "Press Start 2P", sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.shift{ /*скрытый блок с таймером */
+    width: 94px;
+    height: 94px;
+    background-color: rgba(96, 95, 95, 0.749);
+    position: relative;
+    top: -94px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+.option{
+    height: 94px;
+    position: absolute;
+    top: 66px;
+    left: 15px;
+    z-index: 1;
+    background-color: white;
+}
+.controls{
+    box-sizing: border-box;
+    position: absolute;
+    width: 630px;
+    height: 495px;
+    left: 85px;
+    top: 100px;
+    background: rgba(238, 230, 217, 0.647);
+    border: 7px solid #58381A;
+    border-radius: 33px;
+    padding-left: 80px;
+    padding-top: 15px;
+    visibility: hidden; 
+}
+.levels{
+    box-sizing: border-box;
+    position: absolute;
+    width: 800px;
+    height: 250px;
+    left: 55px;
+    top: 195px;
+    background: rgba(238, 230, 217, 0.647);
+    border: 7px solid #58381A;
+    border-radius: 33px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    visibility: hidden;
+}
+.gameCanvas { 
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+}
+
+ .timer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    background-color: #c1c0c0ed;
+    width: 160px;
+    height: 50px;
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid black;
+ }
+/* ////////////////// */
+
+.container_options{
+    text-align: right;
+    margin-right: 1vh;
+}
+
+.level{
+    width: 140px;
+    height: 140px;
+}
+#lvl1{    
+    background-image: url("assets/images/buttons/Group 45.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 40px;
+}
+
+#lvl2{
+    background-image: url("assets/images/buttons/Group 46.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 40px;
+}
+#lvl3{
+    background-image: url("assets/images/buttons/Group 47.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 40px;
+}
+
+.control_key{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+.key{
+    height: 50px;
+}
+
+.gameContainer {
+    display: none;
+}
+
+.startScreen {
+    display: block;
+}
+.deathScreen {
+    visibility: hidden;
+    box-sizing: border-box;
+    position: absolute;
+    width: 800px;
+    left: 25%;
+    top: 25%;
+    padding: 25px;
+    background: rgba(238, 230, 217, 0.647);
+    border: 7px solid #58381A;
+    border-radius: 33px;
+    font-family: "Press Start 2P", sans-serif; 
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 35px;
+}
+.winScreen{
+    display:flex;
+    visibility: hidden;
+    box-sizing: border-box;
+    position: absolute;
+    width: 800px;
+    left: 25%;
+    top: 25%;
+    padding: 25px;
+    background: rgba(238, 230, 217, 0.647);
+    border: 7px solid #58381A;
+    border-radius: 33px;
+    font-family: "Press Start 2P", sans-serif;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 35px;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    background-color: #cac8c6e4;
+    border: 5px solid #58381A;
+    border-radius: 3vh;
+    padding: 3vh 2vh;
+    width: 350px;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 40px;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+
+.health-bar {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    width: 100px; 
+    height: 25px; 
+    background-color: black; 
+    border-radius: 5px; 
+  }
+  
+  .health-bar-fill {
+    width: 100%; 
+    height: 20px; 
+    background-color: red; 
+    border-radius: 5px; 
+  }
+  
+  .health-text {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 16px;
+    font-family: Arial;
+  }
